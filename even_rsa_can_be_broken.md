@@ -1,5 +1,7 @@
 # proof to the reimann hypothesis
 
+by randomperson3108
+
 i was like how do you solve this the generation is completely random???
 and then i looked at N
 
