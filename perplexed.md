@@ -2,7 +2,7 @@
 
 We're provided with a 64-bit ELF. Running it, we get a simple password check.
 
-```shell
+```console
 $ chmod +x ./perplexed
 $ ./perplexed 
 Enter the password: adsf
