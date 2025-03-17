@@ -7,7 +7,7 @@ and then i looked at N
 N = 14936781859804605588746838041713158561188415170352556184615401920008774342201052649375896800783072126172605808967780878422577224915764436716229847494556734
 ```
 
-its an even number :skull::skull::skull::skull: 2 is a prime number
+its an even number :skull::skull::skull::skull: (2 is a prime number)
 
 now we can get the values of p and q:
 ```py
