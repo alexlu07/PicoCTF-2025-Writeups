@@ -158,4 +158,4 @@ Run 3: Using default movements and offset instructions from Run 2 to get to the 
 
 ### Solution
 
-See solve.ipynb
+See [solve.ipynb](https://github.com/alexlu07/zwsp-PicoCTF-2025-Writeups/blob/main/Cryptography/Ricochet/solve.ipynb).
