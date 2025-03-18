@@ -56,4 +56,4 @@ Currently working on the writeups for the remaining challenges...
 * \[300 pts] [Apriti sesamo]()
 * \[300 pts] [Pachinko]()
 * \[500 pts] [Pachinko Revisited]()
-* [secure-email-service](https://github.com/alexlu07/PicoCTF-2025-Writeups/tree/main/Web%20Exploitation/secure-email-service)
+* \[500 pts] [secure-email-service](https://github.com/alexlu07/PicoCTF-2025-Writeups/tree/main/Web%20Exploitation/secure-email-service)
