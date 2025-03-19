@@ -1,44 +1,40 @@
-# proof to the reimann hypothesis
+# EVEN RSA CAN BE BROKEN???
 
-by randomperson3108
+### Description
 
-i was like how do you solve this the generation is completely random???
-and then i looked at N
+> This service provides you an encrypted flag. Can you decrypt it with just N & e? <br>
+> Connect to the program with netcat: <br>
+> $ nc verbal-sleep.picoctf.net 53723 <br>
+> The program's source code can be downloaded here.
 
-```py
-N = 14936781859804605588746838041713158561188415170352556184615401920008774342201052649375896800783072126172605808967780878422577224915764436716229847494556734
-```
+---
 
-its an even number :skull::skull::skull::skull: (2 is a prime number)
+### Attack
 
-now we can get the values of p and q:
-```py
-p = 2
-q = 7468390929902302794373419020856579280594207585176278092307700960004387171100526324687948400391536063086302904483890439211288612457882218358114923747278367
-```
-from that you can get the totient:
-```py
-totient = (p - 1) * (q - 1)
-d = pow(e, -1, totient)
-```
-and decode the message by:
-```py
-long_to_bytes(pow(c, d, N))
-```
+~ *RandomPerson3108 pov*
 
-full script:
+This was definitely one of the hardest challenges in the entire CTF, since the values were truly created by complete random.
 
-```py
-from Crypto.Util.number import isPrime, long_to_bytes
+**Table of Contents**
+- [EVEN RSA CAN BE BROKEN???](#main)
+    - [Description](#description)
+    - [Attack](#attack)
+      - [Value of N](#)
 
-N = 14936781859804605588746838041713158561188415170352556184615401920008774342201052649375896800783072126172605808967780878422577224915764436716229847494556734
-e = 65537
-cyphertext = #somenumber
-p = 2
-q = N // 2
+#### Value of N
 
-totient = (p - 1) * (q - 1)
-d = pow(e, -1, totient)
-m = pow(cyphertext, d, N)
-print(long_to_bytes(m).decode())
-```
+If you look closely at whatever the value of N that you have, you can notice that the value of N is actually a number.
+
+Figuring out that the value of N was a number was not very useful for solving the challenge, so I decided to look for some quick prime numbers that I can maybe divide the number with.
+
+<img src="2.png" alt="drawing" width="300"/>
+
+According to [Cuemath](https://www.cuemath.com/numbers/is-2-a-prime-number/), 2 is a prime number. Although I wasn't sure if this was the most credible source, I decided to go ahead and divide the number with 2.
+
+However, before I divided the number, I just wanted to check if the value of N was really divisible by 2.
+
+<img src="div.png" alt="drawing" width="300"/>
+
+According to [Study.com](https://study.com/academy/lesson/divisibility-rules-for-2-lesson-for-kids.html), the divisility rule for 2 was that the number ends with either 0, 2, 4, 6, 8. After careful inspection at the value of N again, it was miraculously found that the value of N was in fact divisible by 2!
+
+work in progress
